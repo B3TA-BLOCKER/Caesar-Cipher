@@ -5,7 +5,8 @@ alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n'
 
 # Importing and printing the logo from art.py when the program starts.
 from art import logo
-print(logo)
+import systems from os
+
 
 def caesar(start_text , shift_amount,cipher_direction):
     end_text =""
@@ -27,6 +28,8 @@ def caesar(start_text , shift_amount,cipher_direction):
 # If the user wants to restart the cipher program?
 should_repeat = True
 while should_repeat:
+     system('cls')       
+     print(logo)
     direction = input("Type 'encode' to encrypt, Type 'decode' to decrypt:\n")
     text = input("Type your Message : \n").lower()
     shift = int(input("Type the shift number : \n"))
